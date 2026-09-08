@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fruitsbypili.vercel.app/sitemap.xml
