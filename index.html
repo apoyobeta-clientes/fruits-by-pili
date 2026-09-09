@@ -22,11 +22,11 @@
 <meta name="twitter:description" content="Ensaladas de frutas colombianas 100% naturales, entregadas en Miami.">
 <meta name="twitter:image" content="https://fruitsbypili.vercel.app/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍓</text></svg>">
+<link rel="icon" href="images/logo-real.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -64,20 +64,32 @@
 <body>
 
 <header class="nav">
-  <a href="#top" class="nav__brand">Fruits<span>By Pili</span></a>
+  <a href="#top" class="nav__brand">
+    <img src="images/logo-real.png" alt="Fruits By Pili" class="nav__logo">
+  </a>
   <nav class="nav__links">
     <a href="#productos">Productos</a>
     <a href="#momento">El momento</a>
+    <a href="#testimonios">Testimonios</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
   </nav>
-  <a class="nav__cta" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20una%20ensalada%20de%20frutas" target="_blank" rel="noopener">Pedir ahora</a>
+  <div class="nav__actions">
+    <a class="nav__cart" href="#productos" aria-label="Ver catálogo / carrito">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.5" fill="currentColor"/><circle cx="17.5" cy="20.5" r="1.5" fill="currentColor"/></svg>
+      <span class="nav__cart-badge">2</span>
+    </a>
+    <a class="nav__cta" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20una%20ensalada%20de%20frutas" target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.22.6 4.3 1.66 6.1L4 29l8.1-1.62A11.94 11.94 0 0 0 16.02 27C22.63 27 28 21.63 28 15S22.63 3 16.02 3Zm0 21.8c-1.9 0-3.7-.5-5.24-1.44l-.38-.22-4.8.96.98-4.68-.25-.4A9.7 9.7 0 0 1 6.2 15c0-5.4 4.4-9.8 9.82-9.8 5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+      Pedir ahora
+    </a>
+  </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
-    <div class="hero__content">
+    <div class="hero__content reveal">
       <p class="hero__eyebrow">Miami · 100% natural · Hecha con amor</p>
       <h1>Hoy no cocines.<br>Date el gusto.</h1>
       <p class="hero__lead">Fruta fresca, cortada a mano, con ese toque colombiano que te hace cerrar los ojos al primer bocado. Pídela para ti o para compartir — te la llevamos hasta la puerta.</p>
@@ -86,8 +98,8 @@
         <a href="#productos" class="btn btn--ghost">Ver el catálogo</a>
       </div>
     </div>
-    <div class="hero__media">
-      <video class="hero__video" autoplay muted loop playsinline poster="images/gallery-two-cups.jpg">
+    <div class="hero__media reveal">
+      <video class="hero__video float" autoplay muted loop playsinline poster="images/gallery-two-cups.jpg">
         <source src="images/hero-video.mp4" type="video/mp4">
       </video>
       <span class="hero__tag">"No lo pienses más, pídela hoy" 💛</span>
@@ -96,10 +108,10 @@
 
   <section id="momento" class="moment">
     <div class="moment__grid">
-      <figure class="moment__photo">
+      <figure class="moment__photo reveal">
         <img src="images/gallery-macro.jpg" alt="Ensalada de frutas Fruits By Pili con helado, fresas, kiwi y galleta de barquillo, foto macro" loading="lazy">
       </figure>
-      <div class="moment__text">
+      <div class="moment__text reveal">
         <p class="section-head__eyebrow">Ese momento para ti</p>
         <h2>No es solo fruta. Es un respiro en tu día.</h2>
         <p>Llegas cansada del trabajo, no tienes ganas de cocinar y lo único que quieres es sentarte, cerrar los ojos y darte un gusto. Eso es exactamente lo que hacemos por ti: fruta fresca cortada a mano, helado cremoso y ese toque de queso rallado que solo se entiende probándolo. Sin culpa. Sin cocina. Solo placer.</p>
@@ -113,14 +125,14 @@
   </section>
 
   <section id="productos" class="products">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-head__eyebrow">Catálogo</p>
       <h2>Elige cómo te vas a consentir hoy</h2>
       <p>Sola, en pareja o con toda la familia — siempre hay una excusa perfecta para una ensalada de frutas.</p>
     </div>
 
     <div class="product-grid">
-      <article class="product-card">
+      <article class="product-card reveal">
         <div class="product-card__media">
           <img src="images/gallery-closeup1.jpg" alt="Ensalada de frutas individual Fruits By Pili con fresas, kiwi, durazno y helado" loading="lazy">
         </div>
@@ -129,12 +141,12 @@
           <p>Una opción deliciosa y 100% natural para cuidar de ti. Tu antojo, resuelto en un solo pedido. ¡Pídela ahora!</p>
           <div class="product-card__footer">
             <span class="price">US$ 15</span>
-            <a class="btn btn--small" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20de%20frutas%20(US%2415)" target="_blank" rel="noopener">Pedir</a>
+            <a class="add-btn" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20de%20frutas%20(US%2415)" target="_blank" rel="noopener" aria-label="Pedir Ensalada de frutas">+</a>
           </div>
         </div>
       </article>
 
-      <article class="product-card product-card--featured">
+      <article class="product-card product-card--featured reveal">
         <span class="product-card__badge">Ideal para compartir</span>
         <div class="product-card__media">
           <img src="images/gallery-batch.jpg" alt="Varias ensaladas familiares Fruits By Pili listas para entrega en Miami" loading="lazy">
@@ -144,7 +156,7 @@
           <p>Es nuestra misma ensalada de frutas, pero en presentación para 6 o 7 personas. Para esas tardes en que todos merecen darse el gusto.</p>
           <div class="product-card__footer">
             <span class="price">US$ 80</span>
-            <a class="btn btn--small btn--small-dark" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20Familiar%20(US%2480)" target="_blank" rel="noopener">Pedir</a>
+            <a class="add-btn add-btn--dark" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20Familiar%20(US%2480)" target="_blank" rel="noopener" aria-label="Pedir Ensalada Familiar">+</a>
           </div>
         </div>
       </article>
@@ -152,21 +164,46 @@
   </section>
 
   <section class="gallery">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-head__eyebrow">Recién hecha</p>
       <h2>Así de fresca llega a tus manos</h2>
     </div>
     <div class="gallery__grid">
-      <img src="images/gallery-closeup2.jpg" alt="Ensalada de frutas Fruits By Pili con cereza, fresa y kiwi" loading="lazy">
-      <img src="images/gallery-two-cups.jpg" alt="Dos ensaladas de frutas individuales listas para entrega" loading="lazy">
-      <img src="images/promo-perfecta.jpg" alt="Ensalada de frutas con helado cremoso y queso rallado, el toque colombiano de Fruits By Pili" loading="lazy">
+      <img class="reveal" src="images/gallery-closeup2.jpg" alt="Ensalada de frutas Fruits By Pili con cereza, fresa y kiwi" loading="lazy">
+      <img class="reveal" src="images/gallery-two-cups.jpg" alt="Dos ensaladas de frutas individuales listas para entrega" loading="lazy">
+      <img class="reveal" src="images/promo-perfecta.jpg" alt="Ensalada de frutas con helado cremoso y queso rallado, el toque colombiano de Fruits By Pili" loading="lazy">
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonials">
+    <div class="section-head reveal">
+      <p class="section-head__eyebrow">Lo que dicen al probarla</p>
+      <h2>Reacciones reales, sin ensayar</h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testimonial-video reveal">
+        <video class="testimonial-video__el" muted loop playsinline autoplay poster="images/gallery-two-cups.jpg">
+          <source src="images/hero-video.mp4" type="video/mp4">
+        </video>
+        <span class="testimonial-video__tag">Cliente real disfrutando su pedido 🎥</span>
+      </div>
+      <div class="testimonial-cards reveal">
+        <blockquote class="testimonial-card">
+          <p>"Ese primer bocado con helado y queso rallado es justo lo que describen: cero cocina, puro gusto."</p>
+          <cite>— reacción real capturada en video, arriba</cite>
+        </blockquote>
+        <div class="testimonial-card testimonial-card--cta">
+          <p>¿Ya la probaste? Cuéntanos cómo te fue por Instagram o WhatsApp y con gusto compartimos tu reseña aquí.</p>
+          <a href="https://www.instagram.com/fruitsbypili" target="_blank" rel="noopener" class="testimonial-card__link">Escríbenos en @fruitsbypili →</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="nosotros" class="about">
     <div class="about__grid">
-      <img class="about__portrait" src="images/logo.jpg" alt="Pili, creadora de Fruits By Pili" loading="lazy">
-      <div class="about__text">
+      <img class="about__portrait reveal" src="images/logo.jpg" alt="Pili, creadora de Fruits By Pili" loading="lazy">
+      <div class="about__text reveal">
         <p class="section-head__eyebrow">Nosotros</p>
         <h2>Frescura que te hace feliz.</h2>
         <p>Soy Pili, y cada ensalada la preparo pensando en esa persona que, como tú, llega a casa sin ganas de cocinar pero con ganas de comer algo rico de verdad. Uso fruta fresca seleccionada, un toque de helado cremoso y ese queso rallado que hace única a la receta colombiana. Nada de conservantes, nada de complicaciones — solo un gusto que te mereces.</p>
@@ -181,17 +218,17 @@
   </section>
 
   <section id="contacto" class="contact">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-head__eyebrow">Contacto</p>
       <h2>¿Antojo de fruta fresca?</h2>
       <p class="contact__lead">Escríbenos y te confirmamos tu pedido en minutos. Delivery hoy mismo en Miami — cupos limitados.</p>
     </div>
-    <div class="contact__actions">
+    <div class="contact__actions reveal">
       <a class="btn btn--primary btn--large" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
         WhatsApp: (305) 951-9784
       </a>
     </div>
-    <div class="social">
+    <div class="social reveal">
       <a href="https://www.instagram.com/fruitsbypili" target="_blank" rel="noopener" aria-label="Instagram @fruitsbypili">Instagram</a>
       <a href="https://www.facebook.com/fruitsbypili" target="_blank" rel="noopener" aria-label="Facebook Fruits By Pili">Facebook</a>
       <a href="https://www.tiktok.com/@fruitsbypili" target="_blank" rel="noopener" aria-label="TikTok @fruitsbypili">TikTok</a>
@@ -205,7 +242,8 @@
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
-  <span aria-hidden="true">💬</span>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.22.6 4.3 1.66 6.1L4 29l8.1-1.62A11.94 11.94 0 0 0 16.02 27C22.63 27 28 21.63 28 15S22.63 3 16.02 3Zm0 21.8c-1.9 0-3.7-.5-5.24-1.44l-.38-.22-4.8.96.98-4.68-.25-.4A9.7 9.7 0 0 1 6.2 15c0-5.4 4.4-9.8 9.82-9.8 5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+  <span class="whatsapp-float__label">Pedir por WhatsApp</span>
 </a>
 
 <script src="script.js"></script>
