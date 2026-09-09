@@ -75,9 +75,10 @@
     <a href="#contacto">Contacto</a>
   </nav>
   <div class="nav__actions">
-    <a class="nav__cart" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20hacer%20mi%20pedido" target="_blank" rel="noopener" aria-label="Haz tu compra por WhatsApp">
+    <button class="nav__cart" id="cart-open" aria-label="Ver mi selección">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.5" fill="currentColor"/><circle cx="17.5" cy="20.5" r="1.5" fill="currentColor"/></svg>
-    </a>
+      <span class="nav__cart-badge" id="cart-badge" hidden>0</span>
+    </button>
     <a class="nav__cta" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20una%20ensalada%20de%20frutas" target="_blank" rel="noopener">
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.22.6 4.3 1.66 6.1L4 29l8.1-1.62A11.94 11.94 0 0 0 16.02 27C22.63 27 28 21.63 28 15S22.63 3 16.02 3Zm0 21.8c-1.9 0-3.7-.5-5.24-1.44l-.38-.22-4.8.96.98-4.68-.25-.4A9.7 9.7 0 0 1 6.2 15c0-5.4 4.4-9.8 9.82-9.8 5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
       Pedir ahora
@@ -143,7 +144,7 @@
           <p>Una opción deliciosa y 100% natural para cuidar de ti. Tu antojo, resuelto en un solo pedido. ¡Pídela ahora!</p>
           <div class="product-card__footer">
             <span class="price">US$ 15</span>
-            <a class="add-btn" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20de%20frutas%20(US%2415)" target="_blank" rel="noopener" aria-label="Pedir Ensalada de frutas">+</a>
+            <button class="add-btn" data-id="individual" data-title="Ensalada de frutas" data-price="15" data-image="images/gallery-closeup1.jpg" aria-label="Agregar Ensalada de frutas">+</button>
           </div>
         </div>
       </article>
@@ -158,7 +159,7 @@
           <p>Es nuestra misma ensalada de frutas, pero en presentación para 6 o 7 personas. Para esas tardes en que todos merecen darse el gusto.</p>
           <div class="product-card__footer">
             <span class="price">US$ 80</span>
-            <a class="add-btn add-btn--dark" href="https://wa.me/13059519784?text=Hola%20Pili%2C%20quiero%20pedir%20la%20Ensalada%20Familiar%20(US%2480)" target="_blank" rel="noopener" aria-label="Pedir Ensalada Familiar">+</a>
+            <button class="add-btn add-btn--dark" data-id="familiar" data-title="Ensalada Familiar" data-price="80" data-image="images/gallery-batch.jpg" aria-label="Agregar Ensalada Familiar">+</button>
           </div>
         </div>
       </article>
@@ -182,10 +183,24 @@
       <p class="section-head__eyebrow">Lo que dicen al probarla</p>
       <h2>Reacciones reales, sin ensayar</h2>
     </div>
+    <div class="trust-grid reveal">
+      <div class="trust-card">
+        <span class="trust-card__icon">🍓</span>
+        <p>Fruta cortada el mismo día, nunca de un día para otro.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card__icon">⚡</span>
+        <p>Pedido confirmado por WhatsApp en minutos, sin vueltas.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card__icon">🚗</span>
+        <p>Delivery directo en Miami — llega lista para disfrutar.</p>
+      </div>
+    </div>
     <div class="testimonial-cards testimonial-cards--solo reveal">
       <blockquote class="testimonial-card">
-        <p>"Ese primer bocado con helado y queso rallado es justo lo que describen: cero cocina, puro gusto."</p>
-        <cite>— reacción real de una clienta en Miami</cite>
+        <p>"Ese primer bocado con helado y queso rallado es justo lo que se ve en el video: cero cocina, puro gusto."</p>
+        <cite>— lo que más repiten quienes la prueban</cite>
       </blockquote>
       <div class="testimonial-card testimonial-card--cta">
         <p>¿Ya la probaste? Cuéntanos cómo te fue por Instagram o WhatsApp y con gusto compartimos tu reseña aquí.</p>
@@ -239,6 +254,27 @@
   <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.22.6 4.3 1.66 6.1L4 29l8.1-1.62A11.94 11.94 0 0 0 16.02 27C22.63 27 28 21.63 28 15S22.63 3 16.02 3Zm0 21.8c-1.9 0-3.7-.5-5.24-1.44l-.38-.22-4.8.96.98-4.68-.25-.4A9.7 9.7 0 0 1 6.2 15c0-5.4 4.4-9.8 9.82-9.8 5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
   <span class="whatsapp-float__label">Pedir por WhatsApp</span>
 </a>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+  <div class="cart-drawer__head">
+    <h3>Tu selección</h3>
+    <button class="cart-drawer__close" id="cart-close" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-drawer__body" id="cart-body">
+    <p class="cart-empty" id="cart-empty">Aún no has agregado ensaladas. Toca el "+" en la que se te antoje.</p>
+    <ul class="cart-list" id="cart-list" hidden></ul>
+  </div>
+  <div class="cart-drawer__footer" id="cart-footer" hidden>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cart-total">US$ 0</strong>
+    </div>
+    <p class="cart-note">Sin cobro en línea: confirmas y pagas directo con Pili por WhatsApp.</p>
+    <a class="btn btn--primary btn--large cart-checkout" id="cart-checkout" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    <button class="cart-clear" id="cart-clear">Vaciar selección</button>
+  </div>
+</aside>
 
 <script src="script.js"></script>
 </body>
