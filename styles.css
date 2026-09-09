@@ -436,6 +436,17 @@ img { max-width: 100%; display: block; }
 
 /* Footer */
 .footer { text-align: center; padding: 28px; color: var(--ink-soft); font-size: 0.85rem; border-top: 1px solid var(--line); }
+.footer__tagline { font-family: 'Fraunces', serif; font-size: 1rem; color: var(--ink); font-weight: 600; margin-bottom: 10px; }
+
+.review-cta {
+  max-width: 640px; margin: 40px auto 0; text-align: center;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 20px;
+  padding: 28px 30px; box-shadow: 0 16px 32px -22px rgba(28,28,46,0.35);
+}
+.review-cta p { color: var(--ink-soft); line-height: 1.65; font-size: 1rem; }
+.review-cta__closer { margin-top: 12px; font-weight: 700; color: var(--ink); }
+.review-cta__link { display: inline-block; margin-top: 16px; font-weight: 800; color: var(--pink-dark); }
+.review-cta__link:hover { color: var(--pink); }
 
 /* Cart drawer */
 .cart-overlay {
