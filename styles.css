@@ -365,7 +365,7 @@ img { max-width: 100%; display: block; }
 .product-card__body h3 { font-size: 1.55rem; }
 .product-card__body p { color: var(--ink-soft); line-height: 1.6; flex: 1; font-size: 1.05rem; }
 
-.product-card__price-row { display: flex; justify-content: center; padding: 18px 0 0; }
+.product-card__price-row { display: flex; justify-content: center; }
 .product-card__footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
 .product-card__footer--end { justify-content: flex-end; }
 .price {
