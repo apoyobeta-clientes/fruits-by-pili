@@ -41,7 +41,7 @@
   "servesCuisine": "Frutas y postres naturales",
   "sameAs": [
     "https://www.instagram.com/fruitsbypili",
-    "https://www.facebook.com/fruitsbypili",
+    "https://www.facebook.com/profile.php?id=61570732974872",
     "https://www.tiktok.com/@fruitsbypili"
   ],
   "makesOffer": [
@@ -67,7 +67,7 @@
   <a href="#top" class="nav__brand">
     <img src="images/logo-real.png" alt="Fruits By Pili" class="nav__logo">
   </a>
-  <nav class="nav__links">
+  <nav class="nav__links" id="nav-links">
     <a href="#productos">Productos</a>
     <a href="#momento">El momento</a>
     <a href="#testimonios">Testimonios</a>
@@ -83,6 +83,9 @@
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.22.6 4.3 1.66 6.1L4 29l8.1-1.62A11.94 11.94 0 0 0 16.02 27C22.63 27 28 21.63 28 15S22.63 3 16.02 3Zm0 21.8c-1.9 0-3.7-.5-5.24-1.44l-.38-.22-4.8.96.98-4.68-.25-.4A9.7 9.7 0 0 1 6.2 15c0-5.4 4.4-9.8 9.82-9.8 5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
       Pedir ahora
     </a>
+    <button class="nav__burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -180,22 +183,14 @@
       <p class="section-head__eyebrow">Lo que dicen al probarla</p>
       <h2>Reacciones reales, sin ensayar</h2>
     </div>
-    <div class="testimonials__grid">
-      <div class="testimonial-video reveal">
-        <video class="testimonial-video__el" muted loop playsinline autoplay poster="images/gallery-two-cups.jpg">
-          <source src="images/hero-video.mp4" type="video/mp4">
-        </video>
-        <span class="testimonial-video__tag">Cliente real disfrutando su pedido 🎥</span>
-      </div>
-      <div class="testimonial-cards reveal">
-        <blockquote class="testimonial-card">
-          <p>"Ese primer bocado con helado y queso rallado es justo lo que describen: cero cocina, puro gusto."</p>
-          <cite>— reacción real capturada en video, arriba</cite>
-        </blockquote>
-        <div class="testimonial-card testimonial-card--cta">
-          <p>¿Ya la probaste? Cuéntanos cómo te fue por Instagram o WhatsApp y con gusto compartimos tu reseña aquí.</p>
-          <a href="https://www.instagram.com/fruitsbypili" target="_blank" rel="noopener" class="testimonial-card__link">Escríbenos en @fruitsbypili →</a>
-        </div>
+    <div class="testimonial-cards testimonial-cards--solo reveal">
+      <blockquote class="testimonial-card">
+        <p>"Ese primer bocado con helado y queso rallado es justo lo que describen: cero cocina, puro gusto."</p>
+        <cite>— reacción real de una clienta en Miami</cite>
+      </blockquote>
+      <div class="testimonial-card testimonial-card--cta">
+        <p>¿Ya la probaste? Cuéntanos cómo te fue por Instagram o WhatsApp y con gusto compartimos tu reseña aquí.</p>
+        <a href="https://www.instagram.com/fruitsbypili" target="_blank" rel="noopener" class="testimonial-card__link">Escríbenos en @fruitsbypili →</a>
       </div>
     </div>
   </section>
@@ -230,7 +225,7 @@
     </div>
     <div class="social reveal">
       <a href="https://www.instagram.com/fruitsbypili" target="_blank" rel="noopener" aria-label="Instagram @fruitsbypili">Instagram</a>
-      <a href="https://www.facebook.com/fruitsbypili" target="_blank" rel="noopener" aria-label="Facebook Fruits By Pili">Facebook</a>
+      <a href="https://www.facebook.com/profile.php?id=61570732974872" target="_blank" rel="noopener" aria-label="Facebook Fruits By Pili">Facebook</a>
       <a href="https://www.tiktok.com/@fruitsbypili" target="_blank" rel="noopener" aria-label="TikTok @fruitsbypili">TikTok</a>
     </div>
   </section>
